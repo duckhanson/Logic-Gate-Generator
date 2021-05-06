@@ -1,0 +1,54 @@
+.inputTable {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    grid-template-rows: [first-row]auto 1fr auto[end-row];
+    grid-template-columns: [first-col]auto auto 1fr auto[end-col];
+    gap: 1rem 1.5rem;
+    font-size: 1rem;
+    padding: 2rem;
+    height: 100%;
+    width: 70%;
+    /* border: .1rem black solid; */
+    place-items: center;
+    /* text-align: center; */
+}
+
+.code {
+    grid-column: 1 / 2;
+}
+
+.button-u {
+    padding: 0.5rem;
+}
+
+.truth_table {
+    grid-column: 2 / 3;
+}
+
+.submit {
+    grid-column-start: 4;
+    grid-column-end: end;
+}
+
+
+
+.border-double {
+    border: .3rem black double;
+}
+
+.border-solid {
+    border: .1rem black solid;
+}
+
+.codeSection {
+    height: 100%;
+    width: 100%;
+    margin: 3rem 0rem;
+    grid-column: 1/6;
+}
+
+.codeSection .codeText {
+    height: 30rem;
+}
