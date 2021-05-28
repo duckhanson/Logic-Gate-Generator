@@ -1,13 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import 'codeTable.css';
+import { Container, Row, Col, Button} from 'react-bootstrap';
+import './codeTable.css';
 
 const CodeTable = (props) => {
 
     return (
-        <div>
-            <h1>I'm Code Table</h1>
-        </div>
-
+        <Container fluid>
+            <Row>
+                <Col>
+                    <textarea
+                        className="form-control"
+                        id="codeArea"
+                        rows="30"
+                        placeholder="What would you want to Generate ?
+                        ---------------------------------------------
+                        Example:
+                        c=a&b
+                        d=b|c
+                        u=c&d
+                        "
+                    />
+                </Col>
+            </Row>
+            <Row className="justify-content-end">
+                <Col xs="auto">
+                    <Button color="primary" id='submitBtn'>Submit</Button>{' '}
+                </Col>
+            </Row>
+        </Container>
     );
 }
  
