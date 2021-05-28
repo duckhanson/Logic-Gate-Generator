@@ -1,4 +1,9 @@
 .HomePage {
-    justify-content: space-between;
+    justify-content:center;
     background-color:blanchedalmond;
+    padding: 1rem;
+}
+
+.Header {
+    justify-content:center;
 }

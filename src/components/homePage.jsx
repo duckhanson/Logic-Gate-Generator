@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
-import InputTable from './inputTable';
-import ResultTable from './resultTable';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Link, Route } from 'react-router-dom';
 
 import './homePage.css';
 
@@ -11,17 +10,15 @@ const HomePage = (props) => {
 
     return (
         <Container className='HomePage'>
-            <Row>
-                <Col>
+            <Row xs={1} className='Header'>
+                <Col xs='auto'>
                     <h1>Logic Gate Generator</h1>
                 </Col>
             </Row>
-            <Row>
-                <Col xs={1}>
-                    <Button color="primary">Try</Button>
-                </Col>
-                <Col xs={1}>
-                    <Button color="primary">Examples</Button>
+            <hr />
+            <Row xs={1} className='justify-content-center'>
+                <Col xs='auto'>
+                    <Button as={Link} to="/WorkPage" color="primary">Let's Try</Button>
                 </Col>
             </Row>
         </Container>

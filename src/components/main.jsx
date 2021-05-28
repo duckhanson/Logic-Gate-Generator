@@ -1,19 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {
-    Container,
-    Row,
-    Col,
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Input,
-    Button,
-} from "reactstrap";
+import { Container, Row, Col, Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 import "./main.css";
 import HomePage from "./homePage";
 import WorkPage from "./workPage";
@@ -21,43 +8,21 @@ import WorkPage from "./workPage";
 const Main = (props) => {
     return (
         <Router>
+            <Navbar bg="dark" variant="dark">
+                <Navbar.Brand as={Link} to="/">Team14</Navbar.Brand>
+                <Nav className="mr-auto">
+                    <Nav.Link as={Link} to="/">Home</Nav.Link>
+                    <Nav.Link as={Link} to="/WorkPage">WorkPage</Nav.Link>
+                </Nav>
+            </Navbar>
             <Container className="main bg-faded">
-                <Row>
-                    <Navbar color="faded" light expand="md">
-                        <Nav navbar>
-                            <NavItem>
-                                <NavLink tag={Link} to="/">
-                                    HomePage
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/workpage">
-                                    WorkPage
-                                </NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Navbar>
-                </Row>
-                <Row>
+                <Row xs="auto">
                     <Col>
-                        <Route
-                            exact
-                            path="/"
-                            render={() => (
-                                <HomePage />
-                            )}
-                        />
-                        <Route
-                            exact
-                            path="/workpage"
-                            render={() => (
-                                <WorkPage />
-                            )}
-                        />
+                        <Route exact path="/" component={HomePage} />
+                        <Route path="/WorkPage" component={WorkPage}/>
                     </Col>
-
                 </Row>
-                <Row>
+                <Row xs="1">
                     <Col>
                         <div className="footer">Logic Gate Generator.</div>
                     </Col>

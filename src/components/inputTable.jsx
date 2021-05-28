@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Route } from "react-router";
+import CodeTable from "./codeTable";
+import TruthTable from "./truthTable";
 
 import "./inputTable.css";
 
@@ -13,12 +16,10 @@ const InputTable = (props) => {
     return (
         <Container fluid className="form-group">
             <Row>
-                <textarea
-                className="form-control"
-                id="codeArea"
-                rows="30"
-                placeholder="I'm InputTable"
-                />
+                <Col>
+                    <Route exact path="/WorkPage" component={CodeTable} />
+                    <Route path="/WorkPage/TruthTable" component={TruthTable} />
+                </Col>
             </Row>
         </Container>
     )
