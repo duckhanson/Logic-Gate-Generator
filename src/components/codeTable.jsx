@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'codeTable.css';
 
-class CodeTable extends Component {
-    // state = {  }
-    render() { 
-        return;
-    }
+const CodeTable = (props) => {
+
+    return (
+        <div>
+            <h1>I'm Code Table</h1>
+        </div>
+
+    );
 }
  
 export default CodeTable;

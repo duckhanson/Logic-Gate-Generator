@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
+
 import Main from './components/main'
-import InputTable from './components/inputTable';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Main/>
-    <InputTable/>    
   </React.StrictMode>,
   document.getElementById('root')
 );
