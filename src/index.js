@@ -5,8 +5,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Main from './components/Main'
+import '@fortawesome/fontawesome-free/css/all.css';
+import Main from './components/Main';
 
 
 

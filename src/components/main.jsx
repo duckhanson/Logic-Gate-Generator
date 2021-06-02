@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Main.css";
 import HomePage from "./HomePage";
@@ -17,7 +17,10 @@ const Main = (props) => {
                         </Col>
                     </Row>
                 </Container>
-                <footer className='fixed-bottom'>Logic Gate Generator.</footer>
+                <div className='fixed-bottom'>
+                    <hr />
+                    <footer>@NTHU Logic Gate Generator.</footer>
+                </div>
             </div>
         </Router>
     );

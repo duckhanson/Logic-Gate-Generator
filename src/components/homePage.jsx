@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Link, Route } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDove } from "@fortawesome/free-solid-svg-icons";
 import './HomePage.css';
 
 const HomePage = (props) => {
@@ -9,23 +10,16 @@ const HomePage = (props) => {
     
 
     return (
-        <Container className='HomePage'>
-            <Row className='justify-content-md-center'>
-                <Col className='col-auto'>
-                    <h1>Logic Gate Generator</h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <hr />
-                </Col>
-            </Row>
-            <Row className='justify-content-md-center'>
-                <Col className='col-auto'>
-                    <Button as={Link} to="/WorkPage" variant="outline-dark">Let's Try</Button>
-                </Col>
-            </Row>
-        </Container>
+        <div className='HomePage'>
+            <div className='Header'>
+                <h1> <FontAwesomeIcon icon={faDove} /> Logic Gate Generator</h1>
+                <hr />
+
+            </div>
+            <div className='Button'>
+                <Button as={Link} to="/WorkPage" variant="outline-dark">Let's Try</Button>
+            </div>
+        </div>
     );
 }
  

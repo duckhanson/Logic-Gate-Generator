@@ -5,22 +5,29 @@ import './CodeTable.css';
 const CodeTable = (props) => {
 
     return (
-        <div>
-            <textarea
-                className="form-control"
-                id="codeArea"
-                cols="40"
-                rows="30"
-                placeholder="What would you want to Generate ?
-                ---------------------------------------------
-                Example:
-                c=a&b
-                d=b|c
-                u=c&d
-                "
-            />
-            <Button className='submitBtn' color="primary" id='submitBtn'>Submit</Button>{' '}
+        // <div className='editorContainer'>
+        //     <div className='editorTitle'>
+        //         Verilog
+        //     </div>
+        // </div>
 
+        <div>
+            <form>
+                <div className='form-group'>
+                    <div class="form-group">
+                        <textarea class="form-control" rows='30' 
+                        placeholder="What would you want to Generate ?
+                        ---------------------------------------------
+                        Example:
+                        c=a&b
+                        d=b|c
+                        u=c&d
+                        "></textarea>
+                    </div>
+                </div>
+            </form>
+
+            <Button className='submitBtn' variant="outline-dark" id='submitBtn'>Submit</Button>{' '}
         </div>
     );
 }

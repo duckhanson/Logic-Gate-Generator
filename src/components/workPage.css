@@ -1,13 +1,141 @@
 .WorkPage{
-    margin: 1rem;
+    margin: 0;
+    height: 90vh;
+    /* width: 100vw; */
+    display: grid;
+    padding: 1% 2%;
+    grid-gap: 1rem;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "Header Header"
+    "CodeArea ResultTable"
 }
 
-.fixed-top {
-    margin-top: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
+.WorkPage .Header {
+  grid-area: Header;
 }
 
-.fixed-top .btn {
-    margin-right: 2%;
+.WorkPage .CodeArea {
+  grid-area: CodeArea;
 }
+
+.WorkPage .ResultTable {
+  grid-area: ResultTable;
+}
+
+/* .WorkPage .Footer {
+  grid-area: Footer;
+} */
+
+.icon {
+  /* /* color: #212529 !important; */
+  
+  border-color:transparent !important;
+  /* border: 1px solid transparent !important; */ 
+}
+
+.ResultTable {
+    border: 1px solid #ced4da;
+    border-top-color: rgb(206, 212, 218);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(206, 212, 218);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(206, 212, 218);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(206, 212, 218);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition-property: border-color, box-shadow;
+
+    /* height: 100%;
+    width: 100%; */
+}
+
+.editorTitle {
+    padding: 10px;
+    font-family: Tahoma;
+    font-weight: bold;
+}
+
+.editorContainer {
+    background-color: #1d1e22;
+    height: 100%;
+    color: #b7bbc8;
+    padding-left: 5px;
+    position: relative;
+}
+
+
+.Resizer {
+    background: #000;
+    opacity: 0.2;
+    z-index: 1;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+  }
+   
+  .Resizer:hover {
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+   
+  .Resizer.horizontal {
+    height: 11px;
+    margin: -5px 0;
+    border-top: 5px solid rgba(255, 255, 255, 0);
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    cursor: row-resize;
+    width: 100%;
+  }
+   
+  .Resizer.horizontal:hover {
+    border-top: 5px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  }
+   
+  .Resizer.vertical {
+    width: 11px;
+    margin: 0 -5px;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    cursor: col-resize;
+  }
+   
+  .Resizer.vertical:hover {
+    border-left: 5px solid rgba(0, 0, 0, 0.5);
+    border-right: 5px solid rgba(0, 0, 0, 0.5);
+  }
+  .Resizer.disabled {
+    cursor: not-allowed;
+  }
+  .Resizer.disabled:hover {
+    border-color: transparent;
+  }
+
+  #SplitPane {
+    display:block;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: static !important;
+  }
+  
