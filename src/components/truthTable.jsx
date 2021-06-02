@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './truthTable.css';
+import './TruthTable.css';
 
 const TruthTable = (props) => {
     

@@ -1,33 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Container, Row, Col, Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
-import "./main.css";
-import HomePage from "./homePage";
-import WorkPage from "./workPage";
+import { Container, Row, Col } from "react-bootstrap";
+import "./Main.css";
+import HomePage from "./HomePage";
+import WorkPage from "./WorkPage";
 
 const Main = (props) => {
     return (
         <Router>
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand as={Link} to="/">Team14</Navbar.Brand>
-                <Nav className="mr-auto">
-                    <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/WorkPage">WorkPage</Nav.Link>
-                </Nav>
-            </Navbar>
-            <Container className="main bg-faded">
-                <Row xs="auto">
-                    <Col>
-                        <Route exact path="/" component={HomePage} />
-                        <Route path="/WorkPage" component={WorkPage}/>
-                    </Col>
-                </Row>
-                <Row xs="1">
-                    <Col>
-                        <div className="footer">Logic Gate Generator.</div>
-                    </Col>
-                </Row>
-            </Container>
+            <div className='Main '>
+                <Container className="bg-faded">
+                    <Row>
+                        <Col>
+                            <Route exact path="/" component={HomePage} />
+                            <Route path="/WorkPage" component={WorkPage}/>
+                        </Col>
+                    </Row>
+                </Container>
+                <footer className='fixed-bottom'>Logic Gate Generator.</footer>
+            </div>
         </Router>
     );
 };

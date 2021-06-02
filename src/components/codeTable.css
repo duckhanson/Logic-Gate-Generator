@@ -1,0 +1,11 @@
+textarea {
+    resize: none;
+}
+
+.submitBtn {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: auto;
+}

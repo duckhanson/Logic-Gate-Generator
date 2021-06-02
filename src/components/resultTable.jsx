@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './resultTable.css';
+import './ResultTable.css';
 
 const ResultTable = (props) => {
     
