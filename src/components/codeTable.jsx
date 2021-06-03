@@ -14,7 +14,7 @@ const CodeTable = (props) => {
             <form autoComplete='on'>
                 <div className='form-group'>
                     <div class="form-group">
-                        <textarea class="form-control" rows='28' 
+                        <textarea class="form-control" rows='20' 
                         placeholder="What would you want to Generate ?
                         ---------------------------------------------
                         Example:

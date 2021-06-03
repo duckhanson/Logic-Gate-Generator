@@ -18,14 +18,15 @@ const WorkPage = (props) => {
         <div className='WorkPage'>
             <div className='Header'>
                 <Button id='HomeBtn' variant="outlined" className='HomeIcon' component={Link} to="/"><h1><FontAwesomeIcon icon={faDove} /></h1></Button> 
-                <h1 className='HeaderName'>Logic Gate Generator</h1>
+                <h1 className='HeaderName RWD-Height-L'>Logic Gate Generator</h1>
+                <h1 className='HeaderName RWD-Height-S'>Logic Gate Gen</h1>
                 <hr className='Headerline'/>
             </div>
             <div className='CodeArea'>
                 <Route exact path="/WorkPage" component={FloatingActionButtonZoom} />
             </div>
             <Hidden smDown='true'>
-                <ResultTable />
+                <ResultTable className='ResultTable' />
             </Hidden>
             <div className='Footer'>
                 <hr />

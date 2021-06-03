@@ -1,19 +1,44 @@
 .WorkPage{
-  margin: 0;
-  height: 90vh;
-  /* width: 100vw; */
+  /* margin: 0; */
+  height: 100vh;
+  width: 100vw;
   display: grid;
-  padding: 1% 2%;
+  /* padding: 1% 2%; */
   grid-gap: 1rem;
   grid-template-rows: 7% 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
   "Header Header"
   "CodeArea ResultTable";
+  justify-items: center;
+}
+.WorkPage .Footer {
+  width: 100%;
+  background-color: blanchedalmond;
+}
+
+@media(min-width: 420px) {
+  .RWD-Height-L {
+    display: inline;
+  }
+  .RWD-Height-S {
+    display: none;
+  }
+}
+@media(max-width: 420px) {
+  .RWD-Height-L {
+    display: none;
+  }
+  .RWD-Height-S {
+    display: inline;
+  }
+  .WorkPage .Header {
+    justify-content: start;
+  }
 }
 
 
-@media(min-height: 964px) {
+@media(min-height: 800px) {
   .WorkPage .Footer {
     position: fixed;
     right: 0;
@@ -21,6 +46,10 @@
     left: 0;
     z-index: 1030;
   }
+  .WorkPage .CodeArea {
+    grid-area: CodeArea;
+    justify-self: end;
+  }  
 }
 
 
@@ -34,6 +63,10 @@
     "CodeArea"
     "Footer";
   }
+  .WorkPage .CodeArea {
+    grid-area: CodeArea;
+    justify-self: center;
+  }  
 }
 
 @media(max-width:360px) {
@@ -46,6 +79,10 @@
     "Footer";
     /* background-color: blanchedalmond; */
   }
+  .WorkPage .CodeArea {
+    grid-area: CodeArea;
+    justify-self: center;
+  }  
 }
 
 
@@ -83,6 +120,7 @@
 
 .WorkPage .ResultTable {
   grid-area: ResultTable;
+  justify-self: start;
 }
 
 @media(max-width:960px) {

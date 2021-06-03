@@ -13,10 +13,10 @@ const Main = (props) => {
                     <Row>
                         <Col>
                             <Route exact path="/" component={HomePage} />
-                            <Route path="/WorkPage" component={WorkPage}/>
                         </Col>
                     </Row>
                 </Container>
+                <Route path="/WorkPage" component={WorkPage}/>
             </div>
         </Router>
     );
