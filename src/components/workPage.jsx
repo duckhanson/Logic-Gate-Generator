@@ -25,7 +25,7 @@ const WorkPage = (props) => {
             <div className='CodeArea'>
                 <Route exact path="/WorkPage" component={FloatingActionButtonZoom} />
             </div>
-            <Hidden smDown='true'>
+            <Hidden >
                 <ResultTable className='ResultTable' />
             </Hidden>
             <div className='Footer'>

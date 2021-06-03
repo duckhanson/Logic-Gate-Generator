@@ -5,92 +5,91 @@
   display: grid;
   /* padding: 1% 2%; */
   grid-gap: 1rem;
-  grid-template-rows: 7% 1fr;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 7% 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
   "Header Header"
-  "CodeArea ResultTable";
-  justify-items: center;
-}
-.WorkPage .Footer {
-  width: 100%;
-  background-color: blanchedalmond;
+  "CodeArea ResultTable"
+  "Footer Footer"; */
+  /* justify-items: center; */
 }
 
-@media(min-width: 420px) {
-  .RWD-Height-L {
-    display: inline;
-  }
-  .RWD-Height-S {
-    display: none;
-  }
-}
-@media(max-width: 420px) {
-  .RWD-Height-L {
-    display: none;
-  }
-  .RWD-Height-S {
-    display: inline;
+@media (max-width: 768px) {
+  .WorkPage{
+    grid-template-rows: 7% 1fr 1fr 7%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "Header"
+    "CodeArea"
+    "ResultTable"
+    "Footer";
   }
   .WorkPage .Header {
-    justify-content: start;
+    grid-area: Header;
+    justify-self: center;
   }
+  .WorkPage .CodeArea {
+    grid-area: CodeArea;
+    justify-self: center;
+  } 
+  .WorkPage .ResultTable {
+    grid-area: ResultTable;
+    justify-self: center;
+  }
+  .WorkPage .Footer {
+    grid-area: Footer;
+    justify-self: center;
+  } 
 }
 
-
-@media(min-height: 800px) {
-  .WorkPage .Footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1030;
+@media (min-width: 769px) {
+  .WorkPage{
+    grid-template-rows: 7% 1fr 1fr 7%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "Header Header"
+    "CodeArea ResultTable"
+    "Footer Footer";
+  }
+  .WorkPage .Header {
+    grid-area: Header;
+    justify-self: center;
   }
   .WorkPage .CodeArea {
     grid-area: CodeArea;
     justify-self: end;
-  }  
-}
-
-
-
-@media(max-width:960px) {
-  .WorkPage{
-    grid-template-rows: 7% 1fr auto;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "Header"
-    "CodeArea"
-    "Footer";
+  } 
+  .WorkPage .ResultTable {
+    grid-area: ResultTable;
+    justify-self: start;
   }
-  .WorkPage .CodeArea {
-    grid-area: CodeArea;
+  .WorkPage .Footer {
+    grid-area: Footer;
     justify-self: center;
-  }  
+  } 
 }
 
-@media(max-width:360px) {
-  .WorkPage{
-    grid-template-rows: 7% 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "Header"
-    "CodeArea"
-    "Footer";
-    /* background-color: blanchedalmond; */
+
+@media(max-width: 576px) {
+  .RWD-Height-L {
+    display: none;
   }
-  .WorkPage .CodeArea {
-    grid-area: CodeArea;
-    justify-self: center;
-  }  
+  .RWD-Height-S {
+    display: inline;
+  }
 }
 
+@media(min-width: 576px) {
+  .RWD-Height-L {
+    display: inline;
+  }
+  .RWD-Height-S {
+    display: none;
+  }
+}
 
 .WorkPage .Header {
-  grid-area: Header;
-  justify-self: center;
-  
-  display:grid;
+  display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   grid-template-areas: 
@@ -112,25 +111,10 @@
   grid-area: headerline;
 }
 
-
-
-.WorkPage .CodeArea {
-  grid-area: CodeArea;
+.WorkPage .Footer {
+  width: 100%;
+  background-color: blanchedalmond;
 }
-
-.WorkPage .ResultTable {
-  grid-area: ResultTable;
-  justify-self: start;
-}
-
-@media(max-width:960px) {
-  .WorkPage .Footer {
-    grid-area: Footer;
-  }
-}
-
-
-
 
 .editorTitle {
     padding: 10px;

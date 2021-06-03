@@ -88,7 +88,7 @@ export default function FloatingActionButtonZoom() {
 
     return (
         <Paper className="Tabs">
-            <AppBar position="static" color="default">
+            <AppBar className="AppBar" position="static" color="default">
                 <Tabs
                     selectionFollowsFocus
                     value={value}
@@ -98,9 +98,9 @@ export default function FloatingActionButtonZoom() {
                     scrollButtons="on"
                     aria-label="action tabs example"
                 >
-                    <Tab label="Code" icon={<EditIcon />} {...a11yProps(0)}></Tab>
-                    <Tab label="Truth Table" icon={<TocIcon />} {...a11yProps(1)} />
-                    <Tab label="Result" icon={<DetailsIcon />} {...a11yProps(2)} />
+                    <Tab className="CodeButton" label="Code" icon={<EditIcon />} {...a11yProps(0)}></Tab>
+                    <Tab className="TruthButton" label="Truth Table" icon={<TocIcon />} {...a11yProps(1)} />
+                    <Tab className="ResultButton" label="Result" icon={<DetailsIcon />} {...a11yProps(2)} />
                 </Tabs>
             </AppBar>
             <SwipeableViews

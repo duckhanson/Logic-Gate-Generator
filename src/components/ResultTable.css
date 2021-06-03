@@ -26,5 +26,11 @@
     transition-property: border-color, box-shadow;
 
     height: 80%;
-    width: 80%;
+    width: 90vw;
+}
+
+@media (min-width: 769px) {
+    .ResultTable {
+        width: 45vw;
+    }
 }

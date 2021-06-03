@@ -1,22 +1,18 @@
-/* @media(min-width: 960px) {
-    .Tabs {
-        width: 610px;
-    }
-
-} */
-
 .Tabs {
     background-color: #fff;
     position: relative;
-    width: auto;
     min-height: 200px;
-    width: minmax(auto, 610px);
+    width: 45vw;
+}
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-    "AppBar"
-    "TabPanel"
-    "Footer";
+@media (min-width: 678px) and (max-width: 768px) {
+    .Tabs {
+        width: 610px;
+    }
+}
+
+@media (max-width: 677px) {
+    .Tabs {
+        width: 90vw;
+    }
 }
