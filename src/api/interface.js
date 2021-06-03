@@ -1,8 +1,13 @@
-// TODO
-// sentDataToBackEnd()
+import axios from 'axios';
 
-
-
+const logicalGateBaseUrl = "";
 
 // TODO
-// receiveDataFromBackEnd()
+export function sentDataToBackEnd() {
+
+}
+
+// TODO
+export function receiveDataFromBackEnd() {
+
+}

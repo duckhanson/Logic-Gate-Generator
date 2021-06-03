@@ -11,9 +11,6 @@ import ResultTable from './ResultTable';
 import FloatingActionButtonZoom from './Tabs';
 
 const WorkPage = (props) => {
-    
-    
-
     return (
         <div className='WorkPage'>
             <div className='Header'>
