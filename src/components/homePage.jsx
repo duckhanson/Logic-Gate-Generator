@@ -14,10 +14,13 @@ const HomePage = (props) => {
             <div className='Header'>
                 <h1> <FontAwesomeIcon icon={faDove} /> Logic Gate Generator</h1>
                 <hr />
-
             </div>
             <div className='Button'>
                 <Button as={Link} to="/WorkPage" variant="outline-dark">Let's Try</Button>
+            </div>
+            <div className='fixed-bottom'>
+                <hr />
+                <footer>@NTHU Logic Gate Generator.</footer>
             </div>
         </div>
     );

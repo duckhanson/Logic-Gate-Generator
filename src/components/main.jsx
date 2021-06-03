@@ -8,7 +8,7 @@ import WorkPage from "./WorkPage";
 const Main = (props) => {
     return (
         <Router>
-            <div className='Main '>
+            <div className='Main'>
                 <Container className="bg-faded">
                     <Row>
                         <Col>
@@ -17,10 +17,6 @@ const Main = (props) => {
                         </Col>
                     </Row>
                 </Container>
-                <div className='fixed-bottom'>
-                    <hr />
-                    <footer>@NTHU Logic Gate Generator.</footer>
-                </div>
             </div>
         </Router>
     );
