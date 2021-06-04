@@ -8,9 +8,9 @@
 .Tabs {
     background-color: #fff;
     position: relative;
-    width: auto;
-    min-height: 200px;
-    width: minmax(auto, 610px);
+    
+    min-height: 560px;
+    max-width: 610px;
 
     display: grid;
     grid-template-columns: 1fr;
