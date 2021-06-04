@@ -1,0 +1,17 @@
+.Main {
+    height: 100vh;
+    width: inherit;
+    background-color: blanchedalmond;
+    background-size: cover;
+}
+
+
+footer {
+    /* position:relative; */
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgba(5, 3, 3, 0.7);
+    /* padding: 6rem 2rem 2rem 2rem; */
+}
