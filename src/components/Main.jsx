@@ -1,23 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
 import "./Main.css";
-import HomePage from "./HomePage";
-import WorkPage from "./WorkPage";
+import Coding from "./Coding";
+import Upload from "./Upload";
+import Result from "./Result";
+import "../assets/css/main.css";
+import "../assets/css/noscript.css";
 
 const Main = (props) => {
     return (
         <Router>
-            <div className='Main'>
-                <Container className="bg-faded">
-                    <Row>
-                        <Col>
-                            <Route exact path="/" component={HomePage} />
-                        </Col>
-                    </Row>
-                </Container>
-                <Route path="/WorkPage" component={WorkPage}/>
-            </div>
+            <Route exact path="/" component={Coding}/>
+            <Route exact path="/Upload" component={Upload}/>
+            <Route exact path="/Result" component={Result}/>
         </Router>
     );
 };
