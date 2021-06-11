@@ -33,7 +33,9 @@ const Result = (props) => {
 
             {/* Main */}
             <div id="main">
-                <ResultTable />
+                <section className="post">
+                    <ResultTable />    
+                </section>
             </div>
 
             {/* Footer */}

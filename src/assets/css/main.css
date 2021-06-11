@@ -3779,7 +3779,7 @@ input, select, textarea {
 		}
 
 		#main > .post {
-			padding: 8rem 8rem 6rem 8rem ;
+			padding: 6rem 8rem 6rem 8rem ;
 		}
 
 			#main > .post header.major > .date {
@@ -4689,20 +4689,21 @@ input, select, textarea {
 	}
 
 /* Costom */
-.form-group {
-	text-align: center;
-}
+
 .form-control {
     border-color: #EEEEEE;
     border-style: solid;
     border-width: 2px;
     width: 100%;
     min-height: 100px;
-    /* padding: 1%; */
-    /* Text style */
     font-size: 1.1rem;
+	font-weight:600;
     color: rgba(12, 12, 12, 0.7);
     line-height: 27px;
     text-align: left;
     resize: none;
   }
+
+#main > .post > .Submit {
+	text-align: right;
+}

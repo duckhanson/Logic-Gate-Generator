@@ -51,28 +51,33 @@ const Coding = (props) => {
                     <li><a href="#" className="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
                     <li><a href="#" className="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
                     <li><a href="#" className="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" className="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://github.com/duckhanson/Logic-Gate-Generator" className="icon brands fa-github"><span class="label">GitHub</span></a></li>
                 </ul>
             </nav>
             
             {/* Main */}
             <div id="main">
-                <form autoComplete='on'>
-                    <div className='form-group'>
-                
-                            <textarea className="form-control" rows='20' 
-                            placeholder="What would you want to Generate ?
-                            ---------------------------------------------
-                            Example:
-                            c=a&b
-                            d=b|c
-                            u=c&d
-                            ---------------------------------------------
-                            Press and Play !
-                            "></textarea>
-    
+                <article class="post featured">
+                    <form autoComplete='on'>
+                        <div className='form-group'>
+                    
+                                <textarea className="form-control" rows='20' 
+                                placeholder="What would you want to Generate ?
+                                ---------------------------------------------
+                                Example:
+                                c=a&b
+                                d=b|c
+                                u=c&d
+                                ---------------------------------------------
+                                Press and Play !
+                                "></textarea>
+        
+                        </div>
+                    </form>
+                    <div className="Submit">
+                        <Button as={Link} to="/Result" variant="outline-dark">Submit</Button>
                     </div>
-                </form>
+                </article>
             </div>
 
             {/* Footer */}

@@ -6,6 +6,13 @@ import Upload from "./Upload";
 import Result from "./Result";
 import "../assets/css/main.css";
 import "../assets/css/noscript.css";
+// import "../assets/js/jquery.min.js";
+// import "../assets/js/jquery.scrollex.min.js";
+// import "../assets/js/jquery.scrolly.min.js";
+// import "../assets/js/browser.min.js";
+// import "../assets/js/breakpoints.min.js";
+// import "../assets/js/util.js";
+// import "../assets/js/main.js";
 
 const Main = (props) => {
     return (
