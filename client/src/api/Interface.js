@@ -7,7 +7,7 @@ const logicGateBaseUrl = 'http://localhost:3000/api';
 // const logicGateBaseUrl = "http://logic-gate-generator.us-east-1.elasticbeanstalk.com/api";
 
 // TODO
-export function sendVerilogTextToBackEnd(text = '', id = 0) {
+export function sendVerilogText(text = '', id = 0) {
     let url = `${logicGateBaseUrl}/send/verilogText`;
 
     console.log(`Making POST request to: ${url}`);
@@ -21,7 +21,7 @@ export function sendVerilogTextToBackEnd(text = '', id = 0) {
     });
 }
 
-export function sendVerilogFileToBackEnd(file = '', id = 0) {
+export function sendVerilogFile(file = '', id = 0) {
     let url = `${logicGateBaseUrl}/send/verilogFile`;
 
     console.log(`Making POST request to: ${url}`);
@@ -36,7 +36,7 @@ export function sendVerilogFileToBackEnd(file = '', id = 0) {
     });
 }
 
-export function sendUserDefinedTextToBackEnd(text = '', id = 0) {
+export function sendUserDefinedText(text = '', id = 0) {
     let url = `${logicGateBaseUrl}/send/userDefinedText`;
 
     console.log(`Making POST request to: ${url}`);
@@ -53,8 +53,8 @@ export function sendUserDefinedTextToBackEnd(text = '', id = 0) {
 
 
 // TODO
-// receiveDataFromBackEnd() 
-export function receiveDataFromBackEnd(id = 0) {
+// receiveData() 
+export function receiveData(id = 0) {
     let url = `${logicGateBaseUrl}/receive?id=${id}`;
     
     console.log(`Making GET request to: ${url}`);
