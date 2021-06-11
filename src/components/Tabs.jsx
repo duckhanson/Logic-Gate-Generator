@@ -8,7 +8,7 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Zoom from "@material-ui/core/Zoom";
 import Fab from "@material-ui/core/Fab";
-import { Paper } from "@material-ui/core";
+import { Paper, Hidden } from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
 import TocIcon from '@material-ui/icons/Toc';
 import DetailsIcon from '@material-ui/icons/Details';
@@ -100,7 +100,7 @@ export default function FloatingActionButtonZoom() {
                 >
                     <Tab label="Code" icon={<EditIcon />} {...a11yProps(0)}></Tab>
                     <Tab label="Truth Table" icon={<TocIcon />} {...a11yProps(1)} />
-                    <Tab label="Result" icon={<DetailsIcon />} {...a11yProps(2)} />
+                    <Tab className='ResultTab' label="Result" icon={<DetailsIcon />} {...a11yProps(2)} />
                 </Tabs>
             </AppBar>
             <SwipeableViews

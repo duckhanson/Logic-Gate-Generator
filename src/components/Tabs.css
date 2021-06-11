@@ -20,3 +20,9 @@
     "TabPanel"
     "Footer";
 }
+
+@media(min-width: 960px){
+    .ResultTab {
+        display: none !important;
+    }
+}
