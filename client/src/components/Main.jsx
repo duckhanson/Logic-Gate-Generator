@@ -1,6 +1,4 @@
-import {React, useState} from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-// import "./Main.css";
+import {React, useEffect, useState} from "react";
 import Coding from "./Coding";
 import Upload from "./Upload";
 import Result from "./Result";
@@ -20,8 +18,10 @@ const Main = (props) => {
     const [resultFilePath, setResultFilePath] = useState('../images/default.jpg');
     const [loading, setLoading] = useState(false);
     const [loginId, setLoginId] = useState(uuidv4());
+    const [curTab, setCurTab] = useState('Coding');
 
-    const openTab = (tabName) => {
+
+    useEffect(()=> {
         let i, tabLinks, tabContents;
         tabContents = document.getElementsByClassName('tabContent');
         for (i = 0; i < tabContents.length; i++) {
@@ -31,15 +31,15 @@ const Main = (props) => {
         for (i = 0; i < tabLinks.length; i++) {
             tabLinks[i].style.display = "none";
         }
-        let clickedTabContent = tabName + 'Content';
+        let clickedTabContent = curTab + 'Content';
         document.getElementById(clickedTabContent).style.display = "block";
-        let clickedTabLink = tabName + 'Link';
+        let clickedTabLink = curTab + 'Link';
         console.log(clickedTabLink);
         document.getElementById(clickedTabLink).classList.add('active');
-    }
+    }, [curTab]);
 
     return (
-        <Router>
+        <div>
             <div id="wrapper" class="fade-in">
             {/* Header */}
                 <div id="intro">
@@ -61,18 +61,18 @@ const Main = (props) => {
 
                 <nav id="nav">
                     <ul className="links">
-                        <li><a className='tabLink' id='CodingLink' href='/#header' onClick={() => openTab('Coding')}>Coding Here</a></li>
-                        <li><a className='tabLink' id='UploadLink' href='/#header' onClick={() => openTab('Upload')}>Upload .v file</a></li>
-                        <li><a className='tabLink' id='ResultLink' href='/#header' onClick={() => openTab('Result')}>Result image</a></li>
+                        <li><a className='tabLink' id='CodingLink' href='/#header' onClick={() => setCurTab('Coding')}>Coding Here</a></li>
+                        <li><a className='tabLink' id='UploadLink' href='/#header' onClick={() => setCurTab('Upload')}>Upload .v file</a></li>
+                        <li><a className='tabLink' id='ResultLink' href='/#header' onClick={() => setCurTab('Result')}>Result image</a></li>
                     </ul>
                 </nav>
 
             {/* Component */}
                 <div className='tabContent' id='CodingContent'>
-                    <Coding userid={loginId} setLoading={setLoading} setResult={setResultFilePath} />
+                    <Coding userid={loginId} setLoading={setLoading} setResult={setResultFilePath} setCurTab={setCurTab} />
                 </div>
                 <div className='tabContent' id='UploadContent' >
-                    <Upload userid={loginId} setLoading={setLoading} setResult={setResultFilePath} />
+                    <Upload userid={loginId} setLoading={setLoading} setResult={setResultFilePath} setCurTab={setCurTab} />
                 </div>
                 <div className='tabContent' id='ResultContent'>
                     <Result userid={loginId} resultFilePath={resultFilePath} />
@@ -85,7 +85,7 @@ const Main = (props) => {
                     </ul>
                 </div>
             </div>
-        </Router>
+        </div>
     );
 };
 

@@ -1,10 +1,9 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { Link } from 'react-router-dom';
 import {sendVerilogText as sendVerilogTextApi, receiveData as receiveDataApi} from '../api/Interface'
 
 const Coding = (props) => {
-    const {usrId, setLoading, setResult} = props;
+    const {usrId, setLoading, setResult, setCurTab} = props;
 
     const handleSubmit = () => {
         let inputValue = document.getElementById('codingArea').value;
@@ -17,6 +16,7 @@ const Coding = (props) => {
         });
         // empty textarea value
         document.getElementById('codingArea').value = '';
+        setCurTab('Result');
     }
 
     const receiveData = () => {
@@ -35,7 +35,7 @@ const Coding = (props) => {
         <div>
             {/* Main */}
             <div id="main">
-                <article class="post featured">
+                <article className="post featured">
                     <form autoComplete='on'>
                         <div className='form-group'>
                                 <textarea id='codingArea' className="form-control" rows='20' 
@@ -52,7 +52,7 @@ const Coding = (props) => {
                         </div>
                     </form>
                     <div className="Submit">
-                        <Button as={Link} to="/Result" variant="outline-dark" onClick={() => handleSubmit()}>Submit</Button>
+                        <Button variant="outline-dark" onClick={() => handleSubmit()}>Submit</Button>
                     </div>
                 </article>
             </div>

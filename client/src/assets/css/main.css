@@ -185,7 +185,6 @@ input, select, textarea {
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
-		text-transform: uppercase;
 		margin: 0 0 1rem 0;
 	}
 
@@ -4744,6 +4743,8 @@ input, select, textarea {
     margin-right: auto;
 }
 
-#SubModule {
+#SubModule, #SubModuleHeader {
 	display: none;
 }
+
+/* h {font-variant-caps: unicase;} */

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-// import './ResultTable.css';
-import { Paper } from "@material-ui/core";
+import React from "react";
+import defaultImg from '../images/default.jpg';
 
 const Result = (props) => {
     return (
@@ -8,10 +7,7 @@ const Result = (props) => {
             {/* Main */}
             <div id="main">
                 <section className="post">
-                    <Paper className='Result'>
-                        <h1>I'm ResultTable</h1>
-                         {/*TODO: render props.result file  */}
-                    </Paper> 
+                    <img src={defaultImg} alt="this is the result of logic diagram" width='500' height='500' />
                 </section>
             </div>
         </div>

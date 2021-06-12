@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
 import {sendVerilogFile as sendVerilogFileApi, receiveData as receiveDataApi} from '../api/Interface'
 
 const Upload = (props) => {
 
-    const {usrId, setLoading, setResult} = props;
+    const {usrId, setLoading, setResult, setCurTab} = props;
     const [topModule, setTopModule] = useState('');
     const [subModule, setSubModule] = useState('');
 
@@ -16,6 +15,7 @@ const Upload = (props) => {
             setTopModule('');
             setSubModule('');
             setLoading(false);
+            setCurTab('Result');
         }).catch(err => {
             console.error('Error getting result', err);
             setTopModule('');
@@ -38,7 +38,9 @@ const Upload = (props) => {
 
     const handleUploadTopModule = (file) => {
         let subModule = document.getElementById('SubModule');
-        subModule.style.display = 'block';
+        let header = document.getElementById('SubModuleHeader');
+        subModule.style.display = 'inline-block';
+        header.style.display = 'block';
         setTopModule(file);
     }
 
@@ -47,13 +49,14 @@ const Upload = (props) => {
             {/* Main */}
             <div id="main">
                 {/* Here to Upload! */}
-                <article class="post featured">
-                    <h3>You can upload your file here !</h3>
+                <article className="post featured">
+                    <h3>TopModule or AllinOneFile (only accept verilog file)</h3>
                     <input type="file" id="TopModule" accept='.v, .vh, .verilog,.vlg' onChange={(e) => handleUploadTopModule(e.target.value)} value={topModule}></input>
+                    <h3 id="SubModuleHeader">Submodules</h3>
                     <input type="file" id="SubModule" accept='.v, .vh, .verilog,.vlg' onChange={(e) => setSubModule(e.target.value)} value={subModule} multiple></input>
                     <h2><br/></h2>
                     <div className="Submit">
-                        <Button as={Link} to="/Result" variant="outline-dark" onClick={() => handleSubmit()}>Submit</Button>
+                        <Button variant="outline-dark" onClick={() => handleSubmit()}>Submit</Button>
                     </div>
                 </article>
             </div>
