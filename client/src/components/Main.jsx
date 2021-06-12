@@ -1,14 +1,12 @@
 import {React, useState} from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./Main.css";
+// import "./Main.css";
 import Coding from "./Coding";
 import Upload from "./Upload";
 import Result from "./Result";
 import { v4 as uuidv4 } from 'uuid';
 import "../assets/css/main.css";
 import "../assets/css/noscript.css";
-import Header from "./Header";
-import Intro from "./Intro";
 
 // import "../assets/js/jquery.min.js";
 // import "../assets/js/jquery.scrollex.min.js";
@@ -23,7 +21,22 @@ const Main = (props) => {
     const [loading, setLoading] = useState(false);
     const [loginId, setLoginId] = useState(uuidv4())
 
-    
+    const openTab = (tabName) => {
+        let i, tabLinks, tabContents;
+        tabContents = document.getElementsByClassName('tabContent');
+        for (i = 0; i < tabContents.length; i++) {
+            tabContents[i].style.display = "none";
+        }
+        tabLinks = document.getElementsByClassName('tabLinks');
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].style.display = "none";
+        }
+        let clickedTabContent = tabName + 'Content';
+        document.getElementById(clickedTabContent).style.display = "block";
+        let clickedTabLink = tabName + 'Link';
+        console.log(clickedTabLink);
+        document.getElementById(clickedTabLink).classList.add('active');
+    }
 
     return (
         <Router>
@@ -48,16 +61,22 @@ const Main = (props) => {
 
                 <nav id="nav">
                     <ul className="links">
-                        <li><a href="/Coding">Coding Here</a></li>
-                        <li><a href="/Upload">Upload .v file</a></li>
-                        <li><a href="/Result">Result image</a></li>
+                        <li><a className='tabLink' id='CodingLink' href='/#header' onClick={() => openTab('Coding')}>Coding Here</a></li>
+                        <li><a className='tabLink' id='UploadLink' href='/#header' onClick={() => openTab('Upload')}>Upload .v file</a></li>
+                        <li><a className='tabLink' id='ResultLink' href='/#header' onClick={() => openTab('Result')}>Result image</a></li>
                     </ul>
                 </nav>
 
             {/* Component */}
-                <Route path="/Upload" component={Upload} id={loginId} setLoading={setLoading} setResult={setResultFilePath} />
-                <Route path="/Result" component={Result} id={loginId} resultFilePath={resultFilePath} />
-                <Route path="/Coding" component={Coding} id={loginId} setLoading={setLoading} setResult={setResultFilePath} />
+                <div className='tabContent' id='CodingContent'>
+                    <Coding userid={loginId} setLoading={setLoading} setResult={setResultFilePath} />
+                </div>
+                <div className='tabContent' id='UploadContent' >
+                    <Upload userid={loginId} setLoading={setLoading} setResult={setResultFilePath} />
+                </div>
+                <div className='tabContent' id='ResultContent'>
+                    <Result userid={loginId} resultFilePath={resultFilePath} />
+                </div>
             {/* Footer */}
                 <div id="copyright">
                     <ul>
