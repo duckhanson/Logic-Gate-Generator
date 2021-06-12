@@ -2,31 +2,25 @@ import { ControlPointDuplicateOutlined } from "@material-ui/icons";
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import {sendVerilogText, sendVerilogFile, sendUserDefinedText, receiveData} from '../api/Interface'
+import {sendVerilogText, receiveData} from '../api/Interface'
 
 const Coding = (props) => {
+    const [usrId, setLoading, setResult] = props;
 
     const handleSubmit = () => {
         let inputValue = document.getElementById('codingArea').value;
         console.log(inputValue);
+        // <Coding userid={loginId} setLoading={setLoading} setResult={setResultFilePath} />
+        // TODO Async Code
+        // sendVerilogText(usrId, inputValue);
+        
+        // empty textarea value
+        document.getElementById('codingArea').value = '';
     }
-
 
     return (
         /* Wrapper */
         <div>
-            {/* Intro */}
-            
-
-            {/* Nav */}
-            {/* <nav id="nav">
-                <ul className="links">
-                    <li className="active"><a href="/#header">Coding Here</a></li>
-                    <li><a href="/Upload#header">Upload .v file</a></li>
-                    <li><a href="/Result#header">Result image</a></li>
-                </ul>
-            </nav> */}
-            
             {/* Main */}
             <div id="main">
                 <article class="post featured">

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import './ResultTable.css';
 import { Paper } from "@material-ui/core";
-import {sendVerilogText, sendVerilogFile, sendUserDefinedText, receiveData} from '../api/Interface'
 
 const Result = (props) => {
     return (

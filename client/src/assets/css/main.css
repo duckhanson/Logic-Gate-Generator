@@ -3604,7 +3604,9 @@ input, select, textarea {
 		}
 
 /* Nav */
-
+	#UploadContent, #ResultContent {
+		display: none;
+	}
 	#nav {
 		color: #ffffff;
 		display: -moz-flex;
@@ -3714,6 +3716,7 @@ input, select, textarea {
 					font-size: 0.8rem;
 					outline: none;
 					padding: 0 2rem;
+					
 				}
 
 					#nav ul.links li a:hover {
@@ -4706,4 +4709,37 @@ input, select, textarea {
 
 #main > .post > .Submit {
 	text-align: right;
+}
+
+.Result {
+	border: 1px solid #ced4da;
+    border-top-color: rgb(206, 212, 218);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(206, 212, 218);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(206, 212, 218);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(206, 212, 218);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition-property: border-color, box-shadow;
+    height: 500px;
+    width:  auto;
+
+    margin-left: auto;
+    margin-right: auto;
 }

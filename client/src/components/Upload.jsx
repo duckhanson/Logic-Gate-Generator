@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
+import {sendVerilogFile, receiveData} from '../api/Interface'
 
 const Upload = (props) => {
     return (
-        //  Wrapper
         <div>
-            {/* Nav */}
-            {/* <nav id="nav">
-                <ul class="links">
-                    <li><a href="/">Coding Here</a></li>
-                    <li className="active"><a href="/Upload">Upload .v file</a></li>
-                    <li><a href="/Result">Result image</a></li>
-                </ul>
-            </nav> */}
-
             {/* Main */}
             <div id="main">
                 {/* Here to Upload! */}
