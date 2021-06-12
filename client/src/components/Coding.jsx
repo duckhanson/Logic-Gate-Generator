@@ -1,21 +1,33 @@
-import { ControlPointDuplicateOutlined } from "@material-ui/icons";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import {sendVerilogText, receiveData} from '../api/Interface'
+import {sendVerilogText as sendVerilogTextApi, receiveData as receiveDataApi} from '../api/Interface'
 
 const Coding = (props) => {
-    const [usrId, setLoading, setResult] = props;
+    const {usrId, setLoading, setResult} = props;
 
     const handleSubmit = () => {
         let inputValue = document.getElementById('codingArea').value;
         console.log(inputValue);
-        // <Coding userid={loginId} setLoading={setLoading} setResult={setResultFilePath} />
         // TODO Async Code
-        // sendVerilogText(usrId, inputValue);
-        
+        sendVerilogTextApi(usrId, inputValue).then( () => {
+            receiveData();
+        }).catch(err => {
+            console.error('Error getting result', err);
+        });
         // empty textarea value
         document.getElementById('codingArea').value = '';
+    }
+
+    const receiveData = () => {
+        setLoading(true);
+        receiveDataApi(usrId).then(result => {
+            setResult(result);
+            setLoading(false);
+        }).catch(err => {
+            console.error('Error getting result', err);
+            setLoading(false);
+        })
     }
 
     return (

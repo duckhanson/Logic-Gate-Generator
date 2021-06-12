@@ -9,7 +9,8 @@ const Result = (props) => {
             <div id="main">
                 <section className="post">
                     <Paper className='Result'>
-                        <h1>I'm ResultTable</h1> 
+                        <h1>I'm ResultTable</h1>
+                         {/*TODO: render props.result file  */}
                     </Paper> 
                 </section>
             </div>

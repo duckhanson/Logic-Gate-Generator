@@ -1,5 +1,5 @@
 import {React, useState} from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 // import "./Main.css";
 import Coding from "./Coding";
 import Upload from "./Upload";
@@ -19,7 +19,7 @@ import "../assets/css/noscript.css";
 const Main = (props) => {
     const [resultFilePath, setResultFilePath] = useState('../images/default.jpg');
     const [loading, setLoading] = useState(false);
-    const [loginId, setLoginId] = useState(uuidv4())
+    const [loginId, setLoginId] = useState(uuidv4());
 
     const openTab = (tabName) => {
         let i, tabLinks, tabContents;
