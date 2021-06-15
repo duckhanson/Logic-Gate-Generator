@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import {sendVerilogText as sendVerilogTextApi, receiveData as receiveDataApi} from '../api/Interface'
+import {sendUserDefinedText as senduserDefinedTextApi, receiveData as receiveDataApi} from '../api/Interface'
 
 const Coding = (props) => {
     const {usrId, setLoading, setResult, setCurTab} = props;
@@ -9,7 +9,7 @@ const Coding = (props) => {
         let inputValue = document.getElementById('codingArea').value;
         console.log(inputValue);
         // TODO Async Code
-        sendVerilogTextApi(usrId, inputValue).then( () => {
+        senduserDefinedTextApi(usrId, inputValue).then( () => {
             receiveData();
         }).catch(err => {
             console.error('Error getting result', err);
