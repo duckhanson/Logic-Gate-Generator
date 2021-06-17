@@ -12,7 +12,8 @@ export function sendVerilogText(id = 0, text = '') {
     console.log(`Making POST request to: ${url}`);
 
     return axios.post(url, {
-        text
+        text,
+        id
     }).then(function(res) {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
