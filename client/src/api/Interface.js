@@ -9,6 +9,8 @@ const logicGateBaseUrl = 'http://localhost:8080/api';
 export function sendVerilogText(id = 0, text = '') {
     let url = `${logicGateBaseUrl}/send/verilogText`;
 
+
+    
     console.log(`Making POST request to: ${url}`);
 
     return axios.post(url, {
