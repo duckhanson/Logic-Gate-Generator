@@ -9,8 +9,6 @@ const logicGateBaseUrl = 'http://localhost:8080/api';
 export function sendVerilogText(id = 0, text = '') {
     let url = `${logicGateBaseUrl}/send/verilogText`;
 
-
-    
     console.log(`Making POST request to: ${url}`);
 
     return axios.post(url, {
@@ -58,7 +56,7 @@ export function receiveData(id = 0) {
     
     console.log(`Making GET request to: ${url}`);
 
-    return axios.get(url).then(function(res) {
+    return axios.get(url, {id}).then(function(res) {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
 
