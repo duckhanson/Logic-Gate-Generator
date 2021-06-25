@@ -1,7 +1,6 @@
 import {React, useEffect, useState} from "react";
 import Coding from "./Coding";
 import Upload from "./Upload";
-import Result from "./Result";
 import InlineSVG from 'svg-inline-react';
 
 import { v4 as uuidv4 } from 'uuid';
