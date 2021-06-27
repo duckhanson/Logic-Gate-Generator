@@ -26,14 +26,7 @@ export function sendVerilogFile(id = 0, file = null) {
 
     console.log(`Making POST request to: ${url}`);
 
-    return axios.post(url, {
-        file,
-        id
-    }, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-    }).then(function(res) {
+    return axios.post(url, {file, id}).then(function(res) {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
         return res.data;
