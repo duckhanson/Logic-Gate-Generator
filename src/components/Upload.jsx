@@ -10,7 +10,7 @@ const Upload = (props) => {
     const handleSubmit = () => {
         setLoading(true);
         const formData = new FormData();
-        formData.append('file', topModule, topModule.name);
+        formData.append('file', topModule);
         
         console.log(formData);
         sendVerilogFileApi(usrId, formData).then(() => {
