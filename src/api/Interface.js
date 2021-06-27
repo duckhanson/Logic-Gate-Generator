@@ -21,7 +21,7 @@ export function sendVerilogText(id = 0, text = '') {
     });
 }
 
-export function sendVerilogFile(id = 0, file = '') {
+export function sendVerilogFile(id = 0, file = null) {
     let url = `${logicGateBaseUrl}/send/verilogFile`;
 
     console.log(`Making POST request to: ${url}`);
