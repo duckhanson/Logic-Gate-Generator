@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Develop server URL
-const logicGateBaseUrl = 'http://localhost:8080/api';
+const logicGateBaseUrl = 'http://34.81.29.121:8080/api';
 
 // Production server URL
 // const logicGateBaseUrl = "http://logic-gate-generator.us-east-1.elasticbeanstalk.com/api";
