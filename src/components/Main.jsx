@@ -51,8 +51,8 @@ const Main = (props) => {
                 <div id="intro">
                     <h1>This is <br/>
                     Logic Diagram Generator</h1>
-                    <p>A free react project developed by Software Studio Team 14, spring 2021<br />
-                    that helps you to draw the logic gates in a smarter way.</p>
+                    <p>A project developed by Software Studio Team 14, spring 2021<br />
+                    that helps you to draw the logic diagram in a smarter way.</p>
                     <ul className="actions">
                         <li><a href="/#header" className="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
                     </ul>
