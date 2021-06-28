@@ -67,9 +67,9 @@ const Main = (props) => {
 
                 <nav id="nav">
                     <ul className="links">
-                        <li><a className='tabLink' id='CodingLink' href='/#header' onClick={() => setCurTab('Coding')}>Coding Here</a></li>
+                        <li><a className='tabLink' id='CodingLink' href='/#header' onClick={() => setCurTab('Coding')}>Quick Start</a></li>
                         <li><a className='tabLink' id='VerilogLink' href='/#header' onClick={() => setCurTab('Verilog')}>Verilog Code</a></li>
-                        <li><a className='tabLink' id='ResultLink' href='/#header' onClick={() => setCurTab('Result')}>Result image</a></li>
+                        <li><a className='tabLink' id='ResultLink' href='/#header' onClick={() => setCurTab('Result')}>Result Diagram</a></li>
                     </ul>
                 </nav>
             {/* Component */}
@@ -81,7 +81,7 @@ const Main = (props) => {
                 </div>
                 <div className='tabContent' id='ResultContent'>
                     <div id="main">
-                        <section className="post">
+                        <section className="result">
                             <Loader
                                 visible={`${loading}`}
                                 type="Grid"

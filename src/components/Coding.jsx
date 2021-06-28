@@ -22,8 +22,18 @@ const Coding = (props) => {
                 setLoading(false);
             });
             // empty textarea value
-            document.getElementById('codingArea').value = '';
+            // document.getElementById('codingArea').value = '';
             setCurTab('Result');
+        }
+    }
+
+    const removePlaceHolder = () => {
+        console.log('Enter removePlaceHolder');
+        let content = document.getElementById('codingArea').value;
+        if (content === '') {
+            document.getElementById('codingArea').classList.add('displayBg');
+        } else {
+            document.getElementById('codingArea').classList.remove('displayBg');
         }
     }
 
@@ -36,17 +46,8 @@ const Coding = (props) => {
                     <form>
                         <div className='form-group'>
                             <label>
-                                Quick Start:
-                                <textarea id='codingArea' className="form-control" rows='20' 
-                                placeholder="What would you want to Generate ?
-                                ---------------------------------------------
-                                Example:
-                                c=a&b
-                                d=b|c
-                                u=c&d
-                                ---------------------------------------------
-                                Press and Play !
-                                "></textarea>
+                                Quick Start
+                                <textarea id='codingArea' className="form-control displayBg" rows='20' onChange={()=>removePlaceHolder()} ></textarea>
                             </label>
                         </div>
                         

@@ -22,21 +22,10 @@ const Verilog = (props) => {
                 setLoading(false);
             });
             // empty textarea value
-            document.getElementById('verilogArea').value = '';
+            // document.getElementById('verilogArea').value = '';
             setCurTab('Result');
         }
     }
-
-    // const receiveData = () => {
-    //     setLoading(true);
-    //     receiveDataApi(usrId).then(result => {
-    //         setResult(result);
-    //         setLoading(false);
-    //     }).catch(err => {
-    //         console.error('Error getting result', err);
-    //         setLoading(false);
-    //     })
-    // }
 
     return (
         /* Wrapper */

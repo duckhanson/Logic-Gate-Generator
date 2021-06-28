@@ -2077,7 +2077,7 @@ input, select, textarea {
 		border-radius: 0;
 		cursor: pointer;
 		display: inline-block;
-		/* font-family: "Source Sans Pro", Helvetica, sans-serif; */
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 0.8rem;
 		font-weight: 900;
 		letter-spacing: 0.075em;
@@ -2313,10 +2313,10 @@ input, select, textarea {
 	label {
 		display: block;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-weight: 900;
+		font-weight: 500;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
-		font-size: 0.8rem;
+		font-size: 1.2rem;
 		text-transform: uppercase;
 		margin: 0 0 0.75rem 0;
 	}
@@ -4748,3 +4748,23 @@ input, select, textarea {
 }
 
 /* h {font-variant-caps: unicase;} */
+
+.result {
+	text-align: center;
+}
+
+#codingArea, #verilogArea, #topModuleName {
+	background-size:contain;
+    background-repeat: no-repeat;
+    text-indent: 20px;
+	margin: 1rem 0 0.75rem 0;
+    font-family: Consolas,monaco,monospace;
+}
+
+.displayBg {
+	background-image: url(../../images/example.png);
+}
+
+.removeBg {
+	background-image: '';
+}
