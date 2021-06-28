@@ -83,14 +83,14 @@ const Main = (props) => {
                     <div id="main">
                         <section className="result">
                             <Loader
-                                visible={`${loading}`}
+                                visible={loading}
                                 type="Grid"
                                 color="#8a91a8"
                                 height={100}
                                 width={100}
                             />
                             <div id='resultSvg'>
-                                <InlineSVG src={result} />
+                                <InlineSVG src={result} style={{width: "100%", height: "100%"}} />
                             </div>
                         </section>
                     </div>
