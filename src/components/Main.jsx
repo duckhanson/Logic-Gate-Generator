@@ -40,8 +40,10 @@ const Main = (props) => {
         console.log('loading', loading);
         if (loading === false) {
             document.getElementById('resultSvg').style.display = "block";
+            document.getElementById('loader').style.display = "none";
         } else {
             document.getElementById('resultSvg').style.display = "none";
+            document.getElementById('loader').style.display = "block";
         }
     }, [loading])
     
@@ -87,13 +89,14 @@ const Main = (props) => {
                 <div className='tabContent' id='ResultContent'>
                     <div id="main">
                         <section className="result">
-                            <Loader
-                                visible={loading}
-                                type="Grid"
-                                color="#8a91a8"
-                                height={100}
-                                width={100}
-                            />
+                            <div id='loader'>
+                                <Loader
+                                    type="Grid"
+                                    color="#8a91a8"
+                                    height={100}
+                                    width={100}
+                                />
+                            </div>
                             <div id='resultSvg'>
                                 <InlineSVG src={result}/>
                             </div>
