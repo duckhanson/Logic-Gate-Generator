@@ -43,14 +43,14 @@ const Main = (props) => {
             document.getElementById('resultSvg').style.display = "none";
         }
     }, [loading])
-
+    
     return (
         <div>
             <div id="wrapper" className="fade-in">
             {/* Header */}
                 <div id="intro">
                     <h1>This is <br/>
-                    Logic Gate Generator</h1>
+                    Logic Diagram Generator</h1>
                     <p>A free react project developed by Software Studio Team 14, spring 2021<br />
                     that helps you to draw the logic gates in a smarter way.</p>
                     <ul className="actions">
@@ -61,7 +61,7 @@ const Main = (props) => {
                 <div>
                 {/* Header */}
                     <header id="header">
-                        <h1 className="logo">Logic Gate Generator</h1>
+                        <h1 className="logo">Logic Diagram Generator</h1>
                     </header>
                 </div>
 
@@ -98,7 +98,7 @@ const Main = (props) => {
             {/* Footer */}
                 <div id="copyright">
                     <ul>
-                        <li>Logic Gate Generator</li>
+                        <li>Logic Diagram Generator</li>
                         <li>&copy; NTHU</li>
                     </ul>
                 </div>
