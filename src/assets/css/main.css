@@ -4762,7 +4762,7 @@ input, select, textarea {
 }
 
 .displayBg {
-	background-image: url(../../images/example.png);
+	/* background-image: url(../../images/example.png); */
 }
 
 .removeBg {

@@ -27,15 +27,15 @@ const Coding = (props) => {
         }
     }
 
-    const removePlaceHolder = () => {
-        console.log('Enter removePlaceHolder');
-        let content = document.getElementById('codingArea').value;
-        if (content === '') {
-            document.getElementById('codingArea').classList.add('displayBg');
-        } else {
-            document.getElementById('codingArea').classList.remove('displayBg');
-        }
-    }
+    // const removePlaceHolder = () => {
+    //     console.log('Enter removePlaceHolder');
+    //     let content = document.getElementById('codingArea').value;
+    //     if (content === '') {
+    //         document.getElementById('codingArea').classList.add('displayBg');
+    //     } else {
+    //         document.getElementById('codingArea').classList.remove('displayBg');
+    //     }
+    // }
 
     return (
         /* Wrapper */
@@ -47,18 +47,14 @@ const Coding = (props) => {
                         <div className='form-group'>
                             <label>
                                 Quick Start
-                                <textarea id='codingArea' className="form-control displayBg" rows='20' onChange={()=>removePlaceHolder()} ></textarea>
+                                <textarea id='codingArea' className="form-control displayBg" rows='20' 
+                                placeholder={'\nFisrt line is the input symbol name.\nSecond line is output symbol name.\nNext write down the expression.\nexample:\n\na b c d e f\nout1 out2\nout1 = (a & b) ~^ (c | d)\ntmp = (a & b & c & d) & (e | f)\nout2 = !tmp\n\n\nIn this example, a b c d e f are inputs, out1 and out2 are output.\nThe following lines describe how to connect the wires.'}
+                                ></textarea>
                             </label>
                         </div>
                         
                     </form>
-                    {/* <form onSubmit={handleSubmit}>
-                        <label>
-                        Quick Start:
-                        <textarea value={this.state.value} onChange={this.handleChange} />
-                        </label>
-                        <input type="submit" value="Submit" />
-                    </form> */}
+
                     <div className="Submit">
                         <Button variant="outline-dark" onClick={() => handleSubmit()}>Submit</Button>
                     </div>
