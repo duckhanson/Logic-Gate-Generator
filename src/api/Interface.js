@@ -8,13 +8,13 @@ const logicGateBaseUrl = 'http://localhost:8080/api';
 
 export function sendVerilogText(id = 0, topmoduleName = '',text = '') {
     let url = `${logicGateBaseUrl}/send/verilogText`;
-
     console.log(`Making POST request to: ${url}`);
-
+    let usrId = Math.random().toString(36).substring(7);
+    console.log(usrId);
     return axios.post(url, {
         topmoduleName,
         text,
-        id
+        usrId
     }).then(function(res) {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
@@ -24,12 +24,13 @@ export function sendVerilogText(id = 0, topmoduleName = '',text = '') {
 
 export function sendUserDefinedText(id = 0, text = '') {
     let url = `${logicGateBaseUrl}/send/userDefinedText`;
-
+    console.log(id);
     console.log(`Making POST request to: ${url}`);
-
+    let usrId = Math.random().toString(36).substring(7);
+    console.log(usrId);
     return axios.post(url, {
         text,
-        id
+        usrId
     }).then(function(res) {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
