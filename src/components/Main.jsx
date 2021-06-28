@@ -60,7 +60,7 @@ const Main = (props) => {
 
                 <div>
                 {/* Header */}
-                    <header id="header">
+                    <header id="header" onClick={()=>setCurTab('Coding')}>
                         <h1 className="logo">Logic Diagram Generator</h1>
                     </header>
                 </div>
