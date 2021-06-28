@@ -91,7 +91,7 @@ const Main = (props) => {
                         <section className="result">
                             <div id='loader'>
                                 <Loader
-                                    type="Grid"
+                                    type="Oval"
                                     color="#8a91a8"
                                     height={100}
                                     width={100}
