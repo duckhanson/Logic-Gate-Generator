@@ -85,7 +85,7 @@ const Main = (props) => {
                             <Loader
                                 visible={`${loading}`}
                                 type="Grid"
-                                color="#55396e"
+                                color="#8a91a8"
                                 height={100}
                                 width={100}
                             />

@@ -4756,9 +4756,9 @@ input, select, textarea {
 #codingArea, #verilogArea, #topModuleName {
 	background-size:contain;
     background-repeat: no-repeat;
-    text-indent: 20px;
 	margin: 1rem 0 0.75rem 0;
     font-family: Consolas,monaco,monospace;
+	padding: 0%;
 }
 
 .displayBg {

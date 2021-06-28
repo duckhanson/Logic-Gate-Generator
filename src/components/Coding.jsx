@@ -48,7 +48,7 @@ const Coding = (props) => {
                             <label>
                                 Quick Start
                                 <textarea id='codingArea' className="form-control displayBg" rows='20' 
-                                placeholder={'\nFisrt line is the input symbol name.\nSecond line is output symbol name.\nNext write down the expression.\nexample:\n\na b c d e f\nout1 out2\nout1 = (a & b) ~^ (c | d)\ntmp = (a & b & c & d) & (e | f)\nout2 = !tmp\n\n\nIn this example, a b c d e f are inputs, out1 and out2 are output.\nThe following lines describe how to connect the wires.'}
+                                placeholder={'Fisrt line is the input symbol name.\nSecond line is output symbol name.\nNext write down the expression.\nexample:\n\na b c d e f\nout1 out2\nout1 = (a & b) ~^ (c | d)\ntmp = (a & b & c & d) & (e | f)\nout2 = !tmp\n\n\nIn this example, a b c d e f are inputs, out1 and out2 are output.\nThe following lines describe how to connect the wires.'}
                                 ></textarea>
                             </label>
                         </div>
