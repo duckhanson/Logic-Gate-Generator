@@ -11,6 +11,7 @@ const Verilog = (props) => {
         if (inputValue === '' | topModuleName === '') {
             alert('All Input Boxes should be filled !');
         } else {
+            setLoading(true);
             console.log('topModuleName', topModuleName);
             console.log('inputValue', inputValue);
             // TODO Async Code

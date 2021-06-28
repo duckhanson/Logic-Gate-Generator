@@ -24,7 +24,6 @@ export function sendVerilogText(id = 0, topmoduleName = '',text = '') {
 
 export function sendUserDefinedText(id = 0, text = '') {
     let url = `${logicGateBaseUrl}/send/userDefinedText`;
-    console.log(id);
     console.log(`Making POST request to: ${url}`);
     let usrId = Math.random().toString(36).substring(7);
     console.log(usrId);

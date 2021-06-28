@@ -35,8 +35,9 @@ const Main = (props) => {
         console.log(clickedTabLink);
         document.getElementById(clickedTabLink).classList.add('active');
     }, [curTab]);
-
+    
     useEffect(() => {
+        console.log('loading', loading);
         if (loading === false) {
             document.getElementById('resultSvg').style.display = "block";
         } else {
@@ -44,6 +45,10 @@ const Main = (props) => {
         }
     }, [loading])
     
+    const handleLoading = (val) => {
+        setLoading(val);
+    }
+
     return (
         <div>
             <div id="wrapper" className="fade-in">
@@ -74,10 +79,10 @@ const Main = (props) => {
                 </nav>
             {/* Component */}
                 <div className='tabContent' id='CodingContent'>
-                    <Coding userid={loginId} setLoading={setLoading} setResult={setResult} setCurTab={setCurTab} />
+                    <Coding userId={loginId} setLoading={handleLoading} setResult={setResult} setCurTab={setCurTab} />
                 </div>
                 <div className='tabContent' id='VerilogContent' >
-                    <Verilog userid={loginId} setLoading={setLoading} setResult={setResult} setCurTab={setCurTab} />
+                    <Verilog userid={loginId} setLoading={handleLoading} setResult={setResult} setCurTab={setCurTab} />
                 </div>
                 <div className='tabContent' id='ResultContent'>
                     <div id="main">

@@ -13,7 +13,6 @@ const Coding = (props) => {
             console.log(inputValue);
             // TODO Async Code
             setLoading(true);
-
             senduserDefinedTextApi(usrId, inputValue).then(result => {
                 setResult(result);
                 setLoading(false);
